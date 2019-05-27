@@ -1,0 +1,198 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>91农产品溯源平台</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="renderer" content="webkit" />
+<base href="http://www.91suyuan.com/AgriProTraceability/">
+<link rel="stylesheet" href="/Plugins/jqueryui/jquery-ui.css" />
+<link rel="stylesheet" href="/Lib/CloudTools/css/toolcloud_trace.css">
+<link rel="stylesheet" href="/Styles/newcommon2.css">
+<link rel="stylesheet" href="/Styles/newTrace.css">
+<style>
+.header {
+    border-bottom: #FF8400;
+    background: #FF8400;
+}
+.header .search .s-input {
+    border: 1px solid #FFCC80;
+    background: #FFCC80;
+}
+.section-first .extra {
+    background: #FFCC80;
+}
+.section-first .extra .btn-search {
+    border: 1px solid #ff8400;
+    background: #FF8400;
+}
+.section-first .extra .mc {
+    padding: 100px 20px 0 20px;
+}
+.header .nav li {
+    border-bottom: none;
+}
+</style>
+</head>
+<body>
+<div class="topwrapper">
+<div class="header">
+  <div class="w1030">
+    <div class="logo fl"><a href="#"></div>
+    <div class="nav fl" id="TopNav">
+    <ul>
+    <li><a href="http://39.105.90.5:8080/">首页</a></li>
+    <li><a href="/AgriProTraceability/tctrace_product.html">产品库</a></li>
+    <li><a href="/AgriProTraceability/about.html">帮助</a></li>
+    </ul>
+    </div>
+    <div class="search fr">
+      <input  class="s-input search-input" placeholder="搜索产品" />
+      <a class="btn-search"><i class="icon-search"></i></a> </div>
+    <div class="nav-right fr"> 
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="midwrapper">
+    <div class="w1030 clearfix" id="prolist">
+        <div class="main">
+            <div class="section-first clearfix">
+                <div class="slide">
+                    <div class="index-slides">
+                        <div class="img-slide">
+                            <a href="javascript:;">
+                                <img src="/Images/trace/slide_01.png" />
+                            </a>
+                        </div>
+                        <div class="img-slide">
+                            <a href="/AgriProTraceability/91QueryEntrance/TraceabilityReg.html">
+                                <img src="/Images/trace/slide_02.png" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="extra">
+                    <div class="mc">
+                        <p class="title">
+                            溯源档案查询</p>
+                        <p>
+                            <input type="text" class="form-text form-text-block" placeholder="请输入14位追溯码" id="txtBatchID" />
+                        </p>
+                        <p class="mt20">
+                            <a href="javascript:void(0);" class="btn btn-block btn-search" id="J_btnSearch">
+                                查询</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="t-section clearfix mod-product fresh-market">
+                <div class="titlebar">
+                    <span class="more fr"><a href="tctrace_product.html"><i class="arrow-more"></i>更多产品</a></span>
+                    <span class="col-name">新鲜上市</span>
+                </div>
+                <div class="bd">
+                    <ul class="product-list">
+                    </ul>
+                </div>
+            </div>
+            <div class="t-section clearfix mod-product hot-commend">
+                <div class="titlebar">
+                    <span class="more fr"><a href="tctrace_product.html"><i class="arrow-more"></i>更多产品</a></span>
+                    <span class="col-name">热门推荐</span>
+                </div>
+                <div class="bd">
+                    <div class="main-left fl">
+                        <ul class="product-row-list" id="hotproleft">
+                        </ul>
+                    </div>
+                    <div class="main-right fr">
+                        <ul class="big-row-product-item" id="hotproright">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="t-section clearfix mod-product most-popular-product">
+                <div class="titlebar">
+                    <span class="more fr"><a href="tctrace_product.html"><i class="arrow-more"></i>更多产品</a></span>
+                    <span class="col-name">人气最高</span>
+                </div>
+                <div class="bd">
+                    <div class="main-left fr">
+                        <ul class="product-row-list" id="topproleft">
+                        </ul>
+                    </div>
+                    <div class="main-right fl">
+                        <ul class="big-row-product-item" id="topproright">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="section5 clearfix mt40">
+                <ul>
+                    <li class="fore1">
+                        <div class="text">
+                            <p class="title">
+                                智能监控</p>
+                            <p>
+                                生长期全程实时监控</p>
+                        </div>
+                        <img src="/images/trace/ic_ad1.png">
+                    </li>
+                    <li class="fore2">
+                        <div class="text">
+                            <p class="title">
+                                查询便捷</p>
+                            <p>
+                                随时随地查询产品信息</p>
+                        </div>
+                        <img src="/images/trace/ic_ad2.png"></li>
+                    <li class="fore3">
+                        <div class="text">
+                            <p class="title">
+                                信息全面</p>
+                            <p>
+                                全面展现产品各种信息</p>
+                        </div>
+                        <img src="/images/trace/ic_ad3.png"></li>
+                    <li class="fore4">
+                        <div class="text">
+                            <p class="title">
+                                综合销售</p>
+                            <p>
+                                网店链接+实体店地址</p>
+                        </div>
+                        <img src="/images/trace/ic_ad4.png"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/Scripts/jquery-1.9.1.min.js"></script>
+<script src="/Plugins/jqueryui/jquery-ui.min.js"></script>
+<script src="/Scripts/jquery.cookie.js"></script>
+<script src="/Plugins/watermark/jquery.watermark.min.js"></script>
+<script src="/Plugins/msgbox.js"></script>
+<script src="/Scripts/Base.service.js"></script>
+<script src="/Scripts/Base.Storage.js"></script>
+<script src="/Scripts/CookieStorage.js"></script>
+<script src="/Scripts/Service.js"></script>
+<script src="/Scripts/Setting_old.js"></script>
+<script src="/Scripts/Util.js"></script>
+<script src="/Scripts/Transfer.js"></script>
+<script src="/Scripts/History/MyHistory.js"></script>
+<script src="/Scripts/jquery.base64.js"></script>
+<script src="/Scripts/Messages.js"></script>
+<script src="/Enums/EnumConfig.js"></script>
+<script src="/DynamicPages.js"></script>
+<script src="/Plugins/LoadMask/jquery.loadmask.min.js"></script>
+<script src="/Plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="/Scripts/CreateCaptcha.js"></script>
+<script src="/AgriProTraceability/QueryTrace/Transferload.pageHtml.js"></script>
+<script src="/Scripts/sea_global.js"></script>
+<script src="/Plugins/Slides/jquery.slides.min.js"></script>
+<script src="/AgriProTraceability/QueryTrace/queryEntrance.databind.js"></script>
+<script src="queryEntrance.js"></script>
+</body>
+</html>

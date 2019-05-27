@@ -1,0 +1,24 @@
+{
+  "name": "gsms-agriatrace",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "dist": "parcel build --out-dir dist --no-source-maps --public-url /at index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codinggirl/gsms-agriatrace.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codinggirl/gsms-agriatrace/issues"
+  },
+  "homepage": "https://github.com/codinggirl/gsms-agriatrace#readme",
+  "dependencies": {
+    "jest": "^24.8.0",
+    "parcel-bundler": "^1.12.3"
+  }
+}
