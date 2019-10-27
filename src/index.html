@@ -1,0 +1,554 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>农产品溯源平台</title>
+    <link rel="stylesheet" href="http://www.91suyuan.com/Plugins/jqueryui/jquery-ui.css" />
+    <link rel="stylesheet" href="http://www.91suyuan.com/Lib/CloudTools/css/toolcloud_trace.css">
+    <link rel="stylesheet" href="http://www.91suyuan.com/Styles/newcommon2.css">
+    <link rel="stylesheet" href="http://www.91suyuan.com/Styles/newTrace.css">
+
+    <link rel="stylesheet" href="swiper/swiper.min.css">
+    <script src="swiper/swiper.min.js"></script>
+    <style>
+        .header {
+            border-bottom: #FF8400;
+            background: #FF8400;
+        }
+
+        .header .search .s-input {
+            border: 1px solid #FFCC80;
+            background: #FFCC80;
+        }
+
+        .section-first .extra {
+            background: #FFCC80;
+        }
+
+        .section-first .extra .btn-search {
+            border: 1px solid #ff8400;
+            background: #FF8400;
+        }
+
+        .section-first .extra .mc {
+            padding: 100px 20px 0 20px;
+        }
+
+        .header .nav li {
+            border-bottom: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topwrapper">
+        <div class="header">
+            <div class="w1030">
+                <div class="nav fl" id="TopNav">
+                    <ul>
+                        <li><a href="/">首页</a></li>
+                        <li><a href="http://www.91suyuan.com/AgriProTraceability/tctrace_product.html">产品库</a></li>
+                        <li><a href="http://www.91suyuan.com/AgriProTraceability/about.html">帮助</a></li>
+                    </ul>
+                </div>
+                <div class="search fr">
+                    <input class="s-input search-input" placeholder="搜索产品" />
+                    <a class="btn-search"><span class="icon-search"></span></a>
+                </div>
+                <div class="nav-right fr">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="midwrapper">
+        <div class="w1030 clearfix" id="prolist">
+            <div class="main">
+                <div class="section-first clearfix">
+                    <div style="border: 1px solid #ddd;
+                    float: left;
+                    width: 778px;
+                    height: 398px;
+                    position: relative;
+                    background: #fff;">
+                        <!-- Slider main container -->
+                        <div class="swiper-container">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide"><img src="./slide_01.png" /></div>
+                                <div class="swiper-slide"><img src="./slide_02.png" /></div>
+                            </div>
+                            <!-- If we need pagination -->
+                            <div class="swiper-pagination"></div>
+
+                            <!-- If we need navigation buttons -->
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+
+                            <!-- If we need scrollbar -->
+                            <div class="swiper-scrollbar"></div>
+                        </div>
+                    </div>
+                    <div class="extra">
+                        <div class="mc">
+                            <p class="title">溯源档案查询</p>
+                            <p>
+                                <input type="text" class="form-text form-text-block" placeholder="请输入14位追溯码"
+                                    id="txtBatchID" />
+                            </p>
+                            <p class="mt20">
+                                <a class="btn btn-block btn-search" id="J_btnSearch">查询</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="t-section clearfix mod-product fresh-market">
+                    <div class="titlebar">
+                        <span class="more fr">
+                            <a href="http://www.91suyuan.com/AgriProTraceability/tctrace_product.html">
+                                <span class="arrow-more"></span>更多产品
+                            </a>
+                        </span>
+                        <span class="col-name">新鲜上市</span>
+                    </div>
+                    <div class="bd">
+                        <ul class="product-list">
+                            <li class="product">
+                                <a href="http://www.91suyuan.com/AgriProTraceability/query.html?p=742&amp;batchid=2019070621380001">
+                                    <p class="pic">
+                                        <img src="http://www.91suyuan.com/UpFiles/Attachments/2019-07-06/8ef9613a-3bb7-420f-bc2a-9f914d2a5491_.jpg"
+                                            alt="新鲜上市" width="190" height="190">
+                                    </p>
+                                    <div class="info">
+                                        <p class="name">益智</p>
+                                        <p class="date">上市时间：2020/07/22</p>
+                                        <div class="rate">
+                                            <ul class="starbg">
+                                                <li class="starovering" style="width: 0px;"></li>
+                                                <li class="staron" style="width: 12px; z-index: 5;"></li>
+                                                <li class="staron" style="width: 24px; z-index: 4;"></li>
+                                                <li class="staron" style="width: 36px; z-index: 3;"></li>
+                                                <li class="staron" style="width: 48px; z-index: 2;"></li>
+                                                <li class="staron" style="width: 58px; z-index: 1;"></li>
+                                            </ul><span>(0)</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="product">
+                                <a href="http://www.91suyuan.com/AgriProTraceability/query.html?p=742&amp;batchid=2019060821190001">
+                                    <p class="pic">
+                                        <img src="http://www.91suyuan.com/UpFiles/Attachments/2019-06-08/f1ad3287-3fba-4322-ba7d-3321e11b41c3_.jpg"
+                                            alt="石斑鱼" width="190" height="190">
+                                    </p>
+                                    <div class="info">
+                                        <p class="name">石斑鱼</p>
+                                        <p class="date">上市时间：2019/12/28</p>
+                                        <div class="rate">
+                                            <ul class="starbg">
+                                                <li class="starovering" style="width: 52.2px;"></li>
+                                                <li class="staron" style="width: 12px; z-index: 5;"></li>
+                                                <li class="staron" style="width: 24px; z-index: 4;"></li>
+                                                <li class="staron" style="width: 36px; z-index: 3;"></li>
+                                                <li class="staron" style="width: 48px; z-index: 2;"></li>
+                                                <li class="staron" style="width: 58px; z-index: 1;"></li>
+                                            </ul><span>(2)</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="product">
+                                <a href="http://www.91suyuan.com/AgriProTraceability/query.html?p=742&amp;batchid=2019092721490001">
+                                    <p class="pic">
+                                        <img alt="土阉鸡"
+                                            src="http://www.91suyuan.com/UpFiles/Attachments/2019-07-20/e6083b62-4ff1-4fff-80bf-0f4d5e84b62b_.jpg"
+                                            width="190" height="190">
+                                    </p>
+                                    <div class="info">
+                                        <p class="name">土阉鸡</p>
+                                        <p class="date">上市时间：2019/12/20</p>
+                                        <div class="rate">
+                                            <ul class="starbg">
+                                                <li class="starovering" style="width: 0px;"></li>
+                                                <li class="staron" style="width: 12px; z-index: 5;"></li>
+                                                <li class="staron" style="width: 24px; z-index: 4;"></li>
+                                                <li class="staron" style="width: 36px; z-index: 3;"></li>
+                                                <li class="staron" style="width: 48px; z-index: 2;"></li>
+                                                <li class="staron" style="width: 58px; z-index: 1;"></li>
+                                            </ul><span>(0)</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="product last">
+                                <a href="http://www.91suyuan.com/AgriProTraceability/query.html?p=742&amp;batchid=2019101521680001">
+                                    <p class="pic">
+                                        <img alt="阉鸡"
+                                            src="http://www.91suyuan.com/UpFiles/Attachments/2019-10-15/2ae74390-47e5-457c-9aad-56cbe0ff8023_.jpg"
+                                            width="190" height="190">
+                                    </p>
+                                    <div class="info">
+                                        <p class="name">阉鸡</p>
+                                        <p class="date">上市时间：2019/12/06</p>
+                                        <div class="rate">
+                                            <ul class="starbg">
+                                                <li class="starovering" style="width: 0px;"></li>
+                                                <li class="staron" style="width: 12px; z-index: 5;"></li>
+                                                <li class="staron" style="width: 24px; z-index: 4;"></li>
+                                                <li class="staron" style="width: 36px; z-index: 3;"></li>
+                                                <li class="staron" style="width: 48px; z-index: 2;"></li>
+                                                <li class="staron" style="width: 58px; z-index: 1;"></li>
+                                            </ul><span>(0)</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="t-section clearfix mod-product hot-commend">
+                    <div class="titlebar">
+                        <span class="more fr">
+                            <a href="http://www.91suyuan.com/AgriProTraceability/tctrace_product.html"><span class="arrow-more"></span>更多产品</a>
+                        </span>
+                        <span class="col-name">热门推荐</span>
+                    </div>
+                    <div class="bd">
+                        <div class="main-left fl">
+                            <ul class="product-row-list" id="hotproleft">
+                                <li class="row-product">
+                                    <a href="http://www.91suyuan.com/AgriProTraceability/query.html?p=742&amp;batchid=2019071221430001">
+                                        <p class="pic">
+                                            <img alt="黑木耳"
+                                                src="http://www.91suyuan.com/UpFiles/Attachments/2019-07-12/f9deb5b5-298c-4ffb-830f-702ee29ecc4f_.jpg"
+                                                width="130" height="130">
+                                        </p>
+                                        <p class="name">黑木耳</p>
+                                        <p class="date">上市时间：2019/07/12</p>
+                                        <div class="rate">
+                                            <ul class="starbg">
+                                                <li class="starovering" style="width: 58px;"></li>
+                                                <li class="staron" style="width: 12px; z-index: 5;"></li>
+                                                <li class="staron" style="width: 24px; z-index: 4;"></li>
+                                                <li class="staron" style="width: 36px; z-index: 3;"></li>
+                                                <li class="staron" style="width: 48px; z-index: 2;"></li>
+                                                <li class="staron" style="width: 58px; z-index: 1;"></li>
+                                            </ul><span>(1)</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="row-product">
+                                    <a href="http://www.91suyuan.com/AgriProTraceability/query.html?p=742&amp;batchid=2019062321220001">
+                                        <p class="pic">
+                                            <img alt="甘蔗"
+                                                src="http://www.91suyuan.com/UpFiles/Attachments/2019-06-23/6f8d0efd-ca86-4da3-b782-a67ee60b4a4e_.jpg"
+                                                width="130" height="130">
+                                        </p>
+                                        <p class="name">甘蔗</p>
+                                        <p class="date">上市时间：2019/11/21</p>
+                                        <div class="rate">
+                                            <ul class="starbg">
+                                                <li class="starovering" style="width: 58px;"></li>
+                                                <li class="staron" style="width: 12px; z-index: 5;"></li>
+                                                <li class="staron" style="width: 24px; z-index: 4;"></li>
+                                                <li class="staron" style="width: 36px; z-index: 3;"></li>
+                                                <li class="staron" style="width: 48px; z-index: 2;"></li>
+                                                <li class="staron" style="width: 58px; z-index: 1;"></li>
+                                            </ul><span>(3)</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="row-product">
+                                    <a href="http://www.91suyuan.com/AgriProTraceability/query.html?p=742&amp;batchid=2017073015010001">
+                                        <p class="pic">
+                                            <img alt="橡生1号"
+                                                src="http://www.91suyuan.com/UpFiles/Attachments/2017-06-29/63e83545-1a4b-47a8-930c-9cca8f3a5eb0_.jpg"
+                                                width="130" height="130">
+                                        </p>
+                                        <p class="name">橡生1号</p>
+                                        <p class="date">上市时间：2017/07/12</p>
+                                        <div class="rate">
+                                            <ul class="starbg">
+                                                <li class="starovering" style="width: 58px;"></li>
+                                                <li class="staron" style="width: 12px; z-index: 5;"></li>
+                                                <li class="staron" style="width: 24px; z-index: 4;"></li>
+                                                <li class="staron" style="width: 36px; z-index: 3;"></li>
+                                                <li class="staron" style="width: 48px; z-index: 2;"></li>
+                                                <li class="staron" style="width: 58px; z-index: 1;"></li>
+                                            </ul><span>(1)</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="row-product">
+                                    <a href="http://www.91suyuan.com/AgriProTraceability/query.html?p=742&amp;batchid=201608086960001">
+                                        <p class="pic">
+                                            <img alt="陕西大冬枣"
+                                                src="http://www.91suyuan.com/UpFiles/Attachments/2016-08-08/179f6c86-4859-47b7-9692-1791bbfc5b74_.jpg"
+                                                width="130" height="130">
+                                        </p>
+                                        <p class="name">陕西大冬枣</p>
+                                        <p class="date">上市时间：</p>
+                                        <div class="rate">
+                                            <ul class="starbg">
+                                                <li class="starovering" style="width: 58px;"></li>
+                                                <li class="staron" style="width: 12px; z-index: 5;"></li>
+                                                <li class="staron" style="width: 24px; z-index: 4;"></li>
+                                                <li class="staron" style="width: 36px; z-index: 3;"></li>
+                                                <li class="staron" style="width: 48px; z-index: 2;"></li>
+                                                <li class="staron" style="width: 58px; z-index: 1;"></li>
+                                            </ul><span>(1)</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="main-right fr">
+                            <ul class="big-row-product-item" id="hotproright">
+                                <li class="row-product big-row-product">
+                                    <a href="http://www.91suyuan.com/AgriProTraceability/query.html?p=742&amp;batchid=2019101621690001">
+                                        <p class="pic">
+                                            <img alt="宾川金丰汇农业开发有限公司"
+                                                src="http://www.91suyuan.com/UpFiles/Attachments/2019-10-16/7ec69ca8-8636-4a3c-bed1-27eb3e0addde_.jpg"
+                                                width="300" height="300">
+                                        </p>
+                                        <p class="name">宾川金丰汇农业开发有限公司</p>
+                                        <p class="date">上市时间：2019/08/15</p>
+                                        <div class="rate">
+                                            <ul class="starbg">
+                                                <li class="starovering" style="width: 58px;"></li>
+                                                <li class="staron" style="width: 12px; z-index: 5;"></li>
+                                                <li class="staron" style="width: 24px; z-index: 4;"></li>
+                                                <li class="staron" style="width: 36px; z-index: 3;"></li>
+                                                <li class="staron" style="width: 48px; z-index: 2;"></li>
+                                                <li class="staron" style="width: 58px; z-index: 1;"></li>
+                                            </ul><span>(1)</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="t-section clearfix mod-product most-popular-product">
+                    <div class="titlebar">
+                        <span class="more fr">
+                            <a href="http://www.91suyuan.com/AgriProTraceability/tctrace_product.html"><span class="arrow-more"></span>更多产品</a></span>
+                        <span class="col-name">人气最高</span>
+                    </div>
+                    <div class="bd">
+                        <div class="main-left fr">
+                            <ul class="product-row-list" id="topproleft">
+                                <li class="row-product">
+                                    <a href="http://www.91suyuan.com/AgriProTraceability/query.html?p=742&amp;batchid=201609067700001">
+                                        <p class="pic">
+                                            <img alt="西瓜"
+                                                src="http://www.91suyuan.com/UpFiles/Attachments/2016-09-06/06df993c-1272-46bf-9315-2c90913c75b5_.jpg"
+                                                width="130" height="130"></p>
+                                        <p class="name">西瓜</p>
+                                        <p class="date">上市时间：2016/09/06</p>
+                                        <div class="rate">
+                                            <ul class="starbg">
+                                                <li class="starovering" style="width: 18.56px;"></li>
+                                                <li class="staron" style="width: 12px; z-index: 5;"></li>
+                                                <li class="staron" style="width: 24px; z-index: 4;"></li>
+                                                <li class="staron" style="width: 36px; z-index: 3;"></li>
+                                                <li class="staron" style="width: 48px; z-index: 2;"></li>
+                                                <li class="staron" style="width: 58px; z-index: 1;"></li>
+                                            </ul><span>(181)</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="row-product">
+                                    <a href="http://www.91suyuan.com/AgriProTraceability/query.html?p=742&amp;batchid=2016121410270001">
+                                        <p class="pic">
+                                            <img alt="大水庄园小白菜"
+                                                src="http://www.91suyuan.com/UpFiles/Attachments/2016-12-14/dd4cb7af-93b5-466c-9626-42952b186e00_.jpg"
+                                                width="130" height="130"></p>
+                                        <p class="name">大水庄园小白菜</p>
+                                        <p class="date">上市时间：</p>
+                                        <div class="rate">
+                                            <ul class="starbg">
+                                                <li class="starovering" style="width: 47.559999999999995px;"></li>
+                                                <li class="staron" style="width: 12px; z-index: 5;"></li>
+                                                <li class="staron" style="width: 24px; z-index: 4;"></li>
+                                                <li class="staron" style="width: 36px; z-index: 3;"></li>
+                                                <li class="staron" style="width: 48px; z-index: 2;"></li>
+                                                <li class="staron" style="width: 58px; z-index: 1;"></li>
+                                            </ul><span>(153)</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="row-product">
+                                    <a href="http://www.91suyuan.com/AgriProTraceability/query.html?p=742&amp;batchid=201609077750001">
+                                        <p class="pic">
+                                            <img alt="有机紫砂香粘米"
+                                                src="http://www.91suyuan.com/UpFiles/Attachments/2016-09-09/5d5988a7-3051-4859-8817-486c71bcc766_.jpg"
+                                                width="130" height="130"></p>
+                                        <p class="name">有机紫砂香粘米</p>
+                                        <p class="date">上市时间：2016/11/30</p>
+                                        <div class="rate">
+                                            <ul class="starbg">
+                                                <li class="starovering" style="width: 48.720000000000006px;"></li>
+                                                <li class="staron" style="width: 12px; z-index: 5;"></li>
+                                                <li class="staron" style="width: 24px; z-index: 4;"></li>
+                                                <li class="staron" style="width: 36px; z-index: 3;"></li>
+                                                <li class="staron" style="width: 48px; z-index: 2;"></li>
+                                                <li class="staron" style="width: 58px; z-index: 1;"></li>
+                                            </ul><span>(131)</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="row-product">
+                                    <a href="http://www.91suyuan.com/AgriProTraceability/query.html?p=742&amp;batchid=201701157970001">
+                                        <p class="pic">
+                                            <img alt="草莓"
+                                                src="http://www.91suyuan.com/UpFiles/Attachments/2016-11-25/961ca545-c13b-454a-9339-f535ee8717d0_.jpg"
+                                                width="130" height="130"></p>
+                                        <p class="name">草莓</p>
+                                        <p class="date">上市时间：2017/01/25</p>
+                                        <div class="rate">
+                                            <ul class="starbg">
+                                                <li class="starovering" style="width: 44.08px;"></li>
+                                                <li class="staron" style="width: 12px; z-index: 5;"></li>
+                                                <li class="staron" style="width: 24px; z-index: 4;"></li>
+                                                <li class="staron" style="width: 36px; z-index: 3;"></li>
+                                                <li class="staron" style="width: 48px; z-index: 2;"></li>
+                                                <li class="staron" style="width: 58px; z-index: 1;"></li>
+                                            </ul><span>(120)</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="main-right fl">
+                            <ul class="big-row-product-item" id="topproright">
+                                <li class="row-product big-row-product">
+                                    <a href="http://www.91suyuan.com/AgriProTraceability/query.html?p=742&amp;batchid=201601252480001">
+                                        <p class="pic">
+                                            <img alt="阳光玫瑰"
+                                                src="http://www.91suyuan.com/UpFiles/Attachments/2015-05-26/ff0cf2ae-a453-497e-9059-cac216e9301e_550x500.jpg"
+                                                width="300" height="300"></p>
+                                        <p class="name">阳光玫瑰</p>
+                                        <p class="date">上市时间：2015/09/23</p>
+                                        <div class="rate">
+                                            <ul class="starbg">
+                                                <li class="starovering" style="width: 44.08px;"></li>
+                                                <li class="staron" style="width: 12px; z-index: 5;"></li>
+                                                <li class="staron" style="width: 24px; z-index: 4;"></li>
+                                                <li class="staron" style="width: 36px; z-index: 3;"></li>
+                                                <li class="staron" style="width: 48px; z-index: 2;"></li>
+                                                <li class="staron" style="width: 58px; z-index: 1;"></li>
+                                            </ul><span>(207)</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section5 clearfix mt40">
+                    <ul>
+                        <li class="fore1">
+                            <div class="text">
+                                <p class="title">智能监控</p>
+                                <p>生长期全程实时监控</p>
+                            </div>
+                            <img src="http://www.91suyuan.com/images/trace/ic_ad1.png" alt="智能监控">
+                        </li>
+                        <li class="fore2">
+                            <div class="text">
+                                <p class="title">查询便捷</p>
+                                <p>随时随地查询产品信息</p>
+                            </div>
+                            <img src="http://www.91suyuan.com/images/trace/ic_ad2.png" alt="查询便捷">
+                        </li>
+                        <li class="fore3">
+                            <div class="text">
+                                <p class="title">信息全面</p>
+                                <p>全面展现产品各种信息</p>
+                            </div>
+                            <img src="http://www.91suyuan.com/images/trace/ic_ad3.png" alt="信息全面">
+                        </li>
+                        <li class="fore4">
+                            <div class="text">
+                                <p class="title">综合销售</p>
+                                <p>网店链接+实体店地址</p>
+                            </div>
+                            <img src="http://www.91suyuan.com/images/trace/ic_ad4.png" alt="综合销售">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer" class="footer">
+        <div class="foot-bar foot-bar-green">
+            <div class="container">
+                <p class="copyright">宇ICP备19000001号　Copyright © 2019 Contributors. All
+                    rights reserved.</p>
+            </div>
+        </div>
+        <div class="footer-bd w1030">
+            <div class="hy-info">
+                <p>农产品溯源</p>
+                <p>溯源系统效果演示图</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="http://www.91suyuan.com/Scripts/jquery-1.9.1.min.js"></script>
+    <script src="http://www.91suyuan.com/Plugins/jqueryui/jquery-ui.min.js"></script>
+    <script src="http://www.91suyuan.com/Scripts/jquery.cookie.js"></script>
+    <script src="http://www.91suyuan.com/Plugins/watermark/jquery.watermark.min.js"></script>
+    <script src="http://www.91suyuan.com//Plugins/msgbox.js"></script>
+    <script src="http://www.91suyuan.com//Scripts/Base.service.js"></script>
+    <script src="http://www.91suyuan.com//Scripts/Base.Storage.js"></script>
+    <script src="http://www.91suyuan.com//Scripts/CookieStorage.js"></script>
+    <script src="http://www.91suyuan.com//Scripts/Service.js"></script>
+    <script src="http://www.91suyuan.com//Scripts/Setting_old.js"></script>
+    <script src="http://www.91suyuan.com/Scripts/Util.js"></script>
+    <script src="http://www.91suyuan.com/Scripts/Transfer.js"></script>
+    <script src="http://www.91suyuan.com/Scripts/History/MyHistory.js"></script>
+    <script src="http://www.91suyuan.com/Scripts/jquery.base64.js"></script>
+    <script src="http://www.91suyuan.com/Scripts/Messages.js"></script>
+    <script src="http://www.91suyuan.com/Plugins/LoadMask/jquery.loadmask.min.js"></script>
+    <script src="http://www.91suyuan.com/Plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="http://www.91suyuan.com/QueryTrace/Transferload.pageHtml.js"></script>
+    <script src="http://www.91suyuan.com/Scripts/sea_global.js"></script>
+    <script src="http://www.91suyuan.com/QueryTrace/queryEntrance.databind.js"></script>
+    <script src="http://www.91suyuan.com/AgriProTraceability/queryEntrance.js"></script>
+
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            // Optional parameters
+            direction: 'vertical',
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+            autoplay: true
+        })
+    </script>
+</body>
+
+</html>

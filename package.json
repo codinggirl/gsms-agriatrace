@@ -1,24 +1,35 @@
 {
-  "name": "gsms-agriatrace",
+  "name": "agritrace",
   "version": "0.0.0",
-  "description": "",
-  "main": "index.js",
+  "main": "src/index.html",
   "scripts": {
-    "test": "jest",
-    "dist": "parcel build --out-dir dist --no-source-maps --public-url /at index.html"
+    "test": "htmllint src/*.html",
+    "start": "npm run build && serve dist",
+    "build": "html-minifier --output-dir=dist --input-dir=src --config-file=.html-minifier.json --file-ext=html && npm run copy-deps",
+    "prebuild": "rimraf dist",
+    "postbuild": "node scripts/postbuild.js",
+    "copy-deps": "node scripts/copy-assets.js"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "fs-extra": "^8.1.0",
+    "html-minifier": "^4.0.0",
+    "htmllint-cli": "0.0.7",
+    "rimraf": "^3.0.0",
+    "serve": "^11.2.0"
+  },
+  "keywords": [],
+  "dependencies": {
+    "swiper": "^5.2.0"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/codinggirl/gsms-agriatrace.git"
+    "url": "git+https://github.com/codinggirl/ec-agritrace.git"
   },
-  "author": "",
-  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/codinggirl/gsms-agriatrace/issues"
+    "url": "https://github.com/codinggirl/ec-agritrace/issues"
   },
-  "homepage": "https://github.com/codinggirl/gsms-agriatrace#readme",
-  "dependencies": {
-    "jest": "^24.8.0",
-    "parcel-bundler": "^1.12.3"
-  }
+  "homepage": "https://github.com/codinggirl/ec-agritrace#readme",
+  "description": ""
 }
